@@ -68,6 +68,7 @@ const ICONS = [
       "https://raw.githack.com/expo/vector-icons/master/src/vendor/react-native-vector-icons/glyphmaps/Zocial.json"
   }
 ];
+// using this version you have to call the library with `<Icons.Ionicons.Ionicons name=`iosAddCircle size=32 color="magenta" />` which doesnt make sense.
 // const moduleTemplate = ({ name, variant }) => stripIndent`
 // module ${name} = {
 //   [@bs.module ("@expo/vector-icons", "${name}")] [@react.component]
@@ -76,6 +77,7 @@ const ICONS = [
 //     React.element = "${name}";
 // };
 // `;
+// using this version you can call the library with `<Icons.Ionicons name=`iosAddCircle size=32 color="magenta" />` which makes more sense.
 const moduleTemplate = ({ name, variant }) => stripIndent`
 
 [@bs.module ("@expo/vector-icons", "${name}")] [@react.component]
@@ -101,16 +103,10 @@ const makeReasonIdent = x => handleKeywordCollisions(camelCase(x));
 
 const generateVariantFromIconsSet = icons => [
   Object.keys(icons)
-  .map(icon => `| [@bs.as "${icon}"] \`${makeReasonIdent(icon)}`)
+    .map(icon => `| [@bs.as "${icon}"] \`${makeReasonIdent(icon)}`)
     .join("\n    "),
   Object.keys(icons)[0]
 ];
-// const generateVariantFromIconsSet = icons => [
-//   Object.keys(icons)
-//     .map(icon => `| [@bs.as "${icon}"] \`${makeReasonIdent(icon)}`)
-//     .join("\n    "),
-//   Object.keys(icons)[0]
-// ];
 function print( pathtodir ) {
   let files = fs.readdirSync( pathtodir );
   files.forEach( file => {

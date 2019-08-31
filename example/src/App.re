@@ -1,8 +1,7 @@
 open ReactNative;
-open Expo;
+// This is the version of the demo from the orginal repo
+module Icons = ReasonExpoVectorIcons;
 
-// open Ionicons;
-open ReasonExpoVectorIcons;
 let styles =
   Style.(
     StyleSheet.create({
@@ -17,28 +16,28 @@ let styles =
       "instructions": style(~textAlign=`center, ~color="#ffffff", ()),
     })
   );
-
+module Styles = {
+  open Style;
+  let container =
+    style(~flex=1., ~alignItems=`center, ~justifyContent=`center,());
+  let profileContainer =
+    style(~backgroundColor="rgb(76, 217, 100)",());
+};
 [@react.component]
 let app = () => {
   <View style=styles##container>
-    <LinearGradient
-      colors=[|"#DD4B39", "#C62C19"|]
-      start=[|0.0, 0.0|]
-      _end=[|1.0, 1.0|]
-      style=Style.(style(~padding=dp(12.), ~borderRadius=12., ()))>
-      <Text style=styles##instructions>
-        {React.string("To get started, edit App.re")}
-      </Text>
-      <FontAwesome name=`map size=20 color="#fafafa" />
-      <Ionicons name=`iosAddCircle size=32 color="magenta" />
-      <Ionicons name=`iosAdd size=32 color="green" />
-      <AntDesign name=`stepforward size=32 color="red" />
-      <Feather name=`airplay size=32 color="yellow" />
-      <Foundation name=`dieThree size=32 color="yellow" />
-      <Octicons name=`flame size=32 color="orange" />
-      <SimpleLineIcons name=`eyeglass size=32 color="aqua" />
-      <Zocial name=`twitter size=32 color="lightblue" />
-      <Ionicons name=`iosAddCircle size=32 color="magenta" />
-    </LinearGradient>
+    <SafeAreaView
+      style=StyleSheet.flatten([|Styles.container, Styles.profileContainer|])>
+      <View>
+        <Icons.Ionicons name=`iosAddCircle size=32 color="magenta" />
+        <Icons.Ionicons name=`iosAdd size=32 color="green" />
+        <Icons.AntDesign name=`stepforward size=32 color="red" />
+        <Icons.Feather name=`airplay size=32 color="yellow" />
+        <Icons.Foundation name=`dieThree size=32 color="yellow" />
+        <Icons.Octicons name=`flame size=32 color="orange" />
+        <Icons.SimpleLineIcons name=`eyeglass size=32 color="aqua" />
+        <Icons.Zocial name=`twitter size=32 color="lightblue" />
+      </View>
+    </SafeAreaView>
   </View>;
 };
