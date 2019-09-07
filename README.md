@@ -10,42 +10,47 @@ If you're not using Expo, then check out [Astrocoders/bs-react-native-vector-ico
   ![Screenshot of website](https://raw.githubusercontent.com/expo/vector-icons/master/website-screenshot.png)
 - [Expo documentation](https://docs.expo.io/)
 
-# Installation
+## Live App
+
+Run the example on your phone or simulator with `yarn example` from the root directory.
+
+Run it on web with `cd example && yarn install && yarn build`. Then in the terminal run `expo start --web`. Running `web` with `expo` is in active development and it doesn't seem to work from `npm scripts`.
+
+See the demo on [snack.io](www.snack.io) at <https://expo.io/@idkjs/ReasonExpoVectorIconsTestApp>
+
+## Installation
 
 With yarn
 
-`yarn add reason-expo-vector-icons`
+`yarn add @idkjs/reason-expo-vector-icons`
 
 With npm
 
-`npm i reason-expo-vector-icons`
+`npm i @idkjs/reason-expo-vector-icons`
 
 Then add it to your `bsconfig.json`
 
-```
+```json
   ...
   "bs-dependencies": [
-    ...,
+    "reason-react",
+    "reason-react-native",
     "reason-expo-vector-icons"
   ],
   ...
 ```
 
-# Usage
+## Usage
 
-```reasonml
+```reason
 open ReasonExpoVectorIcons;
-
-let component = ReasonReact.statelessComponent("IconExample");
-let make = (_children) => {
-  ...component,
-  render: (_self) => {
-    <Ionicons name=`md-checkmark-circle size=32 color="green" />
-  }
+[@react.component]
+let make = () => {
+  <Ionicons name=`iosAddCircle size=32 color="magenta" />
 };
 ```
 
-# Credits
+## Credits
 
 Thanks to [Astrocoders/bs-react-native-vector-icons](https://github.com/Astrocoders/bs-react-native-vector-icons) for
 providing an example of how to generate this from glyphmap files.
@@ -53,3 +58,6 @@ providing an example of how to generate this from glyphmap files.
 Thanks to [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) for the icons.
 
 Thanks to [@expo/vector-icons](https://github.com/expo/vector-icons) for expo.
+Thanks to [lewisf/reason-expo-vector-icons](https://github.com/lewisf/reason-expo-vector-icons) for original version of this program.
+
+![ios-screenshot](./ios-screenshot.png)

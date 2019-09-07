@@ -1,5 +1,5 @@
 {
-  "name": "reason-expo-vector-icons",
+  "name": "@idkjs/reason-expo-vector-icons",
   "version": "31.0.1",
   "description": "Bucklescript bindings for @expo/vector-icons, the standard way to use icons with Expo.",
   "scripts": {
@@ -7,6 +7,7 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "install::dev": "yarn && install-self-peers -- --ignore-scripts",
+    "example":"cd example && yarn && yarn ios",
     "pub": "npx np --yolo"
   },
   "keywords": [
@@ -14,12 +15,13 @@
     "Expo",
     "React Native",
     "React",
-    "Reason React Native"
+    "Reason React Native",
+    "Vector Icons"
   ],
-  "author": "Lewis Chung<@_lewisf>",
-  "repository": "https://github.com/lewisf/reason-expo-vector-icons",
-  "homepage": "https://github.com/lewisf/reason-expo-vector-icons",
-  "bugs": "https://github.com/lewisf/reason-expo-vector-icons",
+  "author": "Alain Armand <aarmand.inbox@gmail.com>",
+  "repository": "https://github.com/idkjs/reason-expo-vector-icons",
+  "homepage": "https://github.com/idkjs/reason-expo-vector-icons",
+  "bugs": "https://github.com/idkjs/reason-expo-vector-icons",
   "license": "MIT",
   "devDependencies": {
     "@team-griffin/install-self-peers": "^1.1.1",
@@ -30,10 +32,7 @@
     "lodash.capitalize": "^4.2.1"
   },
   "dependencies": {
-    "@expo/vector-icons": "^10.0.5",
-    "react-ionicons": "3.0.1",
-    "reason-macros-bin": "1.0.0-alpha.2",
-    "reason-react-native": "^0.60.0"
+    "@expo/vector-icons": "^10.0.5"
   },
   "peerDependencies": {
     "expo": "^34.0.4",

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ExpoFontsTester",
+    "name": "ReasonExpoVectorIconsTestApp",
     "description": "A basic ReasonExpo app.",
-    "slug": "ExpoFontsTester",
+    "slug": "ReasonExpoVectorIconsTestApp",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
