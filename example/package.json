@@ -9,23 +9,21 @@
     "watch": "bsb -make-world -clean-world -w"
   },
   "dependencies": {
-    "@expo/vector-icons": "10.0.5",
+    "@expo/vector-icons": "^10.0.0",
     "bs-platform": "^7.0.1",
-    "expo": "^36.0.1",
-    "expo-linear-gradient": "^8.0.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "expo": "^36.0.0",
+    "expo-linear-gradient": "~8.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-web": "0.11.7",
     "reason-expo": "^34.4.0",
     "reason-react": "^0.7.0",
     "reason-react-native": "^0.61.0"
   },
   "eslintConfig": {
-
     "extends": "universe/web"
   },
-
   "devDependencies": {
     "babel-preset-expo": "^8.0.0",
     "eslint": "6.7.2",

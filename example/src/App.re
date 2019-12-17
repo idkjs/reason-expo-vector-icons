@@ -29,16 +29,18 @@ let app = () => {
       <Text style=styles##instructions>
         {React.string("To get started, edit App.re")}
       </Text>
-      <FontAwesome name=`map size=20 color="#fafafa" />
-      <Ionicons name=`iosAddCircle size=32 color="magenta" />
+      // <FontAwesome name=`map size=20 color="#fafafa" />
+      // <Ionicons name=`iosAddCircle size=32 color="magenta" />
       <Ionicons name=`iosAdd size=32 color="green" />
       <AntDesign name=`stepforward size=32 color="red" />
-      <Feather name=`airplay size=32 color="yellow" />
-      <Foundation name=`dieThree size=32 color="yellow" />
-      <Octicons name=`flame size=32 color="orange" />
-      <SimpleLineIcons name=`eyeglass size=32 color="aqua" />
-      <Zocial name=`twitter size=32 color="lightblue" />
-      <Ionicons name=`iosAddCircle size=32 color="magenta" />
+      // <Feather name=`airplay size=32 color="yellow" />
+      // <Foundation name=`dieThree size=32 color="yellow" />
+      // <Octicons name=`flame size=32 color="orange" />
+      // <SimpleLineIcons name=`eyeglass size=32 color="aqua" />
+      // <Zocial name=`twitter size=32 color="lightblue" />
+      <Ionicons name=`iosAirplane size=32 color="magenta" />
     </LinearGradient>
+    <View> <AntDesign name=`stepforward size=32 color="red" /> </View>
+    <View> <SimpleLineIcons name=`eyeglass size=32 color="aqua" /> </View>
   </View>;
 };
