@@ -4,7 +4,7 @@ This library is the bindings for @expo/vector-icons which is a compatibility lay
 
 If you're not using Expo, then check out [Astrocoders/bs-react-native-vector-icons](https://github.com/Astrocoders/bs-react-native-vector-icons) instead.
 
-The main difference is that the icons have been updated to current version, `reason` syntax has been updated to latest, this project uses the the latest `reason-react-native` and the `api` has slightly changed in the you can now call any of the icon templates with:
+This is a fork of [oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) The main difference is that the icons have been updated to current version, `reason` syntax has been updated to `bs-platform@7.0.1`, this project uses the the latest `reason-react-native` and the `api` has slightly changed in the you can now call any of the icon templates with:
 
 ```reason
 open ReasonExpoVectorIcons;
